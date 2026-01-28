@@ -12,10 +12,11 @@ This work investigates how unfaithful chain-of-thought behaviors—such as mixed
 
 ### Usage
 ```bash
+# from the repository root
 conda create -n ood python=3.10
 conda activate ood
 pip install -r requirements.txt
-pip install -e .
+export PYTHONPATH=$(pwd):$PYTHONPATH
 ```
 
 To run Experiments on the minimal data format used in the paper (for example), you can execute the following command(s):
