@@ -1,4 +1,3 @@
-# CoT-faithfulness-synthetic-arithmetic
 # How Does Unfaithful Reasoning Emerge from Autoregressive Training?  
 ### Anonymous code release for ICML 2026 submission
 
