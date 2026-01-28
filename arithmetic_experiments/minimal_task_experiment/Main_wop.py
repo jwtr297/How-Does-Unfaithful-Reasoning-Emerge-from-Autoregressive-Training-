@@ -50,7 +50,7 @@ def main(p1, p2, batch_limit: int = 62500, num_epochs: int = 10, modulus: int = 
         return s
 
     # ---------- load and override config ----------
-    with open("./config1.yaml", "r") as file:
+    with open("./config.yaml", "r") as file:
         config_args = yaml.safe_load(file)
 
     for k, v in kwargs.items():
