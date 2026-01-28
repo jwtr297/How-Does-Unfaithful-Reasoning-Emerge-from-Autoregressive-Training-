@@ -1,0 +1,59 @@
+# reproduce
+seed: 42
+
+# model
+vocab_size: 28
+pad_id: 27
+#dimension of the embedding space
+d_model: 128
+ff_dim: 512
+#change the number of heads
+num_heads: 2
+num_layers: 2
+
+# TF model variants
+linear_attn: False
+residual: True
+mlp: True
+dropout: 0.01
+norm: True
+output_norm: True
+pos: "rotary"
+rotary_theta: 10000
+
+# data generation: to do
+max_seq_len: 16
+
+
+
+
+# training
+device: "cuda"  # "cuda" | "cpu"
+lr: 0.001
+lr_min: 0.0005
+batch_size: 512
+use_wd: True
+wd: 0.0
+schedule: "constant"
+label_smoothing: 0.0
+train_mask: True
+num_epoch: 16
+
+
+
+
+
+
+
+
+# logging
+wandb_log: False    # set to true if you want to enable Weights & Biases logging
+wandb_online: False # If True, logs training metrics to an external experiment-tracking service (can be disabled for anonymous review).
+wandb_entity_name: entity_name #replace with your own W&B entity name
+wandb_project_name: project_name #replace with your own W&B project name
+measurements_every_epoch: 1000
+measurements_initial_few_epoch: 5
+print_output: True
+print_diagnosis: True
+n_save: 1
+up_to_first_save: False
